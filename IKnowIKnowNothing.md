@@ -30,7 +30,9 @@ explanations (high likelihood and high prior probability) for the structural
 features of the languages in the sample. The three components are a contribution
 from universal tendencies in language (eg. due to biases in cognitive
 processes), contributions from the linguistic area a language may be part of,
-and an inherited component shared by all the languages of a family.
+and an inherited component shared by all the languages of a family. In addition
+to these three contributions, sbayes infers the weight with which they influence
+our observations.
 
 Let us look at the order of Subject, Verb and Object as one example for a
 feature. In reality, some of our features are very specific, so they are not
@@ -84,7 +86,9 @@ is the intended research outcome, there is nothing much to say about it a
 priori. Instead, we want to generate results in a data-driven way. We choose a
 very broad prior for this, a flat Dirichlet prior for every feature (i.e.
 Dirichlet(1, 1, 1, 1, 1, 1, 1) for the basic word order feature), because that
-makes the outcomes very obvious and interpretable.
+makes the outcomes very obvious and interpretable: The outcome will tell us how
+many languages would *effectively* have each feature, if influences from
+language families and universal tendencies didn't exist.
 
 ## Inherited features
 
@@ -137,4 +141,17 @@ thinking in a Bayesian way here, so we are not just assuming one typical thing,
 but all the possible things with their probabilities. But that's hard to phrase
 without formulas.)
 
+But! Now, we are looking to infer, in a data-driven way, the weight of the
+feature of the common ancestor of a family versus the weight of the universal
+background distribution it refers to. This is exactly one of the tasks sbayes
+was built for: Instead of three weights – between the universal background, the
+areas and the families – we need only two weights; and instead of inferring
+effective frequencies, we want to get the likely feature configuration of the
+ancestor of the language family.
 
+Our actual language sample for the Americas study tries to maximize the number
+of independent data points and therefore contains only one or two languages per
+family, so we cannot use that. That's actually a benefit in disguise: We should
+not use the same data twice, once to infer probability distributions and once to
+use those probability distributions as priors for an analysis using the same
+data and use these weights in the process afterwards.
