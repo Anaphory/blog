@@ -42,6 +42,9 @@ for code in wals["CodeTable"]:
         continue
     coding[code["ID"]] = code["Name"]
 
+missearched = {
+    "Albanian": "alba1267",
+}
 
 print("Accessing Glottolog…")
 languoids: t.Dict[Language_ID, t.Optional[pyglottolog.languoids.Languoid]] = {}
@@ -53,8 +56,8 @@ with Catalog.from_config("glottolog", tag="v4.3") as glottolog_repo:
 
     print("Getting macroareas from WALS supplemented by Glottolog…")
     for language in tqdm(wals["LanguageTable"], total=wals["LanguageTable"].common_props["dc:extent"]):
-        languoids[language["ID"]] = None
-        if language["Glottocode"]:
+        languoids[language["ID"]] = languoids_by_code.get(missearched.get(language["Name"]))
+        if languoids[language["ID"]] is None and language["Glottocode"]:
             try:
                 languoids[language["ID"]] = languoids_by_code.get(language["Glottocode"])
             except (AttributeError, IndexError):
@@ -62,19 +65,19 @@ with Catalog.from_config("glottolog", tag="v4.3") as glottolog_repo:
         if languoids[language["ID"]] is None:
             n, langs = search_langs(glottolog, language["Name"])
             if n >= 1:
-                print(language["ID"], langs[0], end="\n\n")
+                print(language["Name"], langs[0], end="\n\n")
                 languoids[language["ID"]] = languoids_by_code.get(langs[0].id)
                 continue
         if languoids[language["ID"]] is None:
             n, langs = search_langs(glottolog, language["Genus"])
             if n == 1:
-                print(language["ID"], langs[0], end="\n\n")
+                print(language["Name"], language["Genus"], langs[0], end="\n\n")
                 languoids[language["ID"]] = languoids_by_code.get(langs[0].id)
                 continue
         if languoids[language["ID"]] is None:
             n, langs = search_langs(glottolog, language["Family"])
             if n == 1:
-                print(language["ID"], langs[0], end="\n\n")
+                print(language["ID"], language["Family"], langs[0], end="\n\n")
                 languoids[language["ID"]] = languoids_by_code.get(langs[0].id)
                 continue
 

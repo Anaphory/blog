@@ -78,11 +78,63 @@ prior with weights 77, 130, 41, 39, 11, 8, and 2.
 ## Areality of features
 
 The second random component deals with the contribution of each linguistic area.
-This is the domain we know least about. We choose a very broad prior for this, a
-flat Dirichlet prior for every feature (i.e. Dirichlet(1, 1, 1, 1, 1, 1, 1) for
-the basic word order feature), because that makes the outcomes very obvious and
-interpretable.
+The question which language features are easily or rarely transmitted through
+areal diffusion is the domain of these three we know least about. Because this
+is the intended research outcome, there is nothing much to say about it a
+priori. Instead, we want to generate results in a data-driven way. We choose a
+very broad prior for this, a flat Dirichlet prior for every feature (i.e.
+Dirichlet(1, 1, 1, 1, 1, 1, 1) for the basic word order feature), because that
+makes the outcomes very obvious and interpretable.
 
 ## Inherited features
 
-The main issue lies with the third random component. In the original publication, 
+The main issue lies with the third random component. In the original
+publication, the sample did not cover any language family exhaustively. If that
+is the case, we can use the features of related languages outside our sample to
+inform the prior for each family inside the sample. This is a bit coarse,
+presumably the languages inside the sample are near each other and because they
+are more closely related to each other than to languages outside the sample. But
+we currently don't take the closeness of relation into account anyway, there is
+only one level: related or unrelated. So this is appropriate for the level we
+model – and if the majority of languages from a family is inside the sample, the
+prior is not very strong and easily overruled by the family members inside the
+sample.
+
+But how should we deal with the situation where one language family is
+completely inside our sample? When we run our model on the entire two continents
+of North and South America, nearly all language families will be either
+completely inside or completely outside our sample. The exceptions are the one
+or two language families spoken in Siberia and North America, namely
+Eskimo-Aleut and Dené-Yeniseian. (The connection between Na-Dené languages and
+Yeniseian languages is still discussed in linguistics, and I know too little
+about them to decide whether to count them or not.) If we were to follow the
+argument from the previous paragraph, we would assume that we have no data
+outside the sample, and therefore use a flat prior.
+
+But actually, we know a bit more than nothing about language families for which
+we know nothing specific a priori. If we go back in time, our underlying
+universal distribution presumably stays the same. This assumption is known as
+‘Uniformitarian Hypothesis’. It is not actually true (eg.
+[phonemes](PhonemeFrequencies.md) have been shown to be influenced by food
+habits, and thus change over time [@blasi]) – and definitely quite wrong when
+applied to the realized relative frequencies, instead of the underlying
+distribution. However, it's still a useful first approximation.
+
+By this assumption, the ancestral language of a family has features ‘randomly
+drawn’ according to the universal background distribution. This may be, in
+itself, an outlier in that distribution. If we were to isolate each descendant
+languages and wait an extremely long time, we would expect to see the universal
+distribution again. For present-day languages, we will observe something in
+between: The descendants of a common ancestor are not going to be as widely
+distributed as languages overall, but they are also not identical to each other
+and their common ancestor.
+
+If we quantify where a ‘typical’ feature in a ‘typical’ language family is on
+the path from a homgenous state, potentially an outlier in the universal
+distribution, towards showing the universal distribution itself, we can use this
+knowledge for the language families we know nothing about. (Of course, we are
+thinking in a Bayesian way here, so we are not just assuming one typical thing,
+but all the possible things with their probabilities. But that's hard to phrase
+without formulas.)
+
+
