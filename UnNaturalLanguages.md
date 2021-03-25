@@ -1,7 +1,3 @@
-Yes, but is it language?
-
-What do we know, quantitatively, about how languages work, and what do not know? Or what is definitely *not* language?
-
 # Natural languages
 ## Large, Literate, Official Languages
 ## Languages without a culture of literacy
