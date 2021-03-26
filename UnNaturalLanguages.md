@@ -121,7 +121,8 @@ with their own histories and quirks, all fictional.
 
 ## Edge Cases
 
-There are some edge cases worth mentioning.
+There are some edge cases worth mentioning: Whistled modes of languages, ritual
+languages and other cases of a limited domain language.
 
 ## Natural with a twist
 
@@ -159,13 +160,64 @@ This makes the written mode of language atypical. In fact, there are indications
 that being a written language – in particular a ‘large, literate, official
 language’ – even has an influence on the structure of the language.
 
-## The typical natural language
+## A typical natural language
 
-So what does a typical natural language look like? And how many are there?
+So what does a typical natural language look like – not in terms of its content
+but according to its community? And how many languages are there?
+
+To answer these questions, we need to first clear some terminology – so far we
+have talked about what ‘natural language’ is, now we need to sort out what ‘*a*
+natural language’ is, as opposed to a different natural language. The important
+– and somewhat impossible – distinction here is the one between a language and a
+dialect.
+
+An old aphorism says “a language is a dialect with an army and a navy”, but
+political boundaries are only one aspect that can drive dialects apart to become
+different languages. The general consensus for distinguishing two related
+languages from two dialects of a common language is mutual intelligibility.
+[Glottolog](http://glottolog.org), a comprehensive bibliography-annotated
+catalog about the languages of the world, phrases its criterion for including a
+‘languoid’ (i.e. a language, dialect, language family, slang, etc.) as separate
+language like this:
+
+> For any alleged language to be considered in the classification we must first
+> determine whether it was distinct from all other languages. By distinct, we
+> mean not mutually intelligible with any other language. In principle, any
+> convincing evidence to this effect is sufficient. For example, direct
+> comparison of language data or testimonies of non-intelligibility to all
+> neighbouring languages is the most straightforward kind of evidence. But also,
+> various types of evidence for isolation from all other humans for a long time
+> could make a convincing case that a language is indeed distinct from all
+> others. [1]
+> [1]: https://glottolog.org/glottolog/glottologinformation#inclusionexclusionoflanguages
+
+There are two issues which make this definition have a huge number of edge cases.
+
+1. Mutual intelligibility is a scale, not a clear cut. As native German speaker
+   who grew up in the north-west of the country, I may be able to do my
+   groceries in a Swiss farm shop, but I am hard-pressed to understand a
+   discussion of current political events. Are my native variety of German and
+   the local Swiss German now mutually intelligible or not?
+2. Mutual intelligibility is not transitive: Western Dutch may be clearly
+   mutually intelligible with Eastern Dutch, which in turn may be mutually
+   intelligible with North-Western Low German, which may be mutually
+   understandable with my native variety, and so on in a chain of mutual
+   intelligibility reaching down to the Swiss German of Valais. Yet Dutch and
+   Valais German are clearly not mutually intelligible.
+
+I will address this issue of language versus dialect in a future post, for now
+let me assume that the linguists collating the existing language catalogues have
+an internally consistent way to operate and make the distinction. There are two
+major such catalogs: In addition to the research-based
+[Glottolog](http://glottolog.org) I mentioned above, the Christian missionary
+charity SIL International maintains the
+[Ethnoloɠue](https://www.ethnologue.com/) catalog of languages of the world and
+the ISO 639-3 language codes.
+
+
 
 # Contributions
 Authors 
  - Gereon A. Kaiping
  
 Reviewers
-
