@@ -211,10 +211,13 @@ an internally consistent way to operate and make the distinction. There are two
 major such catalogs: In addition to the research-based
 [Glottolog](http://glottolog.org) I mentioned above, the Christian missionary
 charity SIL International maintains the
-[Ethnoloɠue](https://www.ethnologue.com/) catalog of languages of the world and
+[Ethnologue](https://www.ethnologue.com/) catalog of languages of the world and
 the ISO 639-3 language codes.
 
-
+Ethnologue is behind a paywall, everything apart from language name, main
+country, ISO 639-3 code and very rough data on speaker count and endangerment
+status is unavailable. Glottolog is freely available and has a public Python
+API. The original focus of Glottolog was to provide an extensive language documentation bibliography, but the data also includes point-locations for languages and 
 
 # Contributions
 Authors 

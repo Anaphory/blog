@@ -26,3 +26,11 @@ to read & run code: When some results can be derived from publically available
 data using a small amount of Python code, I will show snippets in the blog post,
 and the whole analysis will be available from
 [Github](https://github.com/Anaphory/blog) in addition.
+
+## You have a question about languages?
+
+If you have a quantitative question which is connected to languages in general
+and not to one particular language, feel free to send it to me at
+yesbutisitlanguage@model-ling.eu – If I can find quantitative data to answer it,
+or to prove that we cannot answer it (maybe at all, maybe for now), I shall try
+to do that and post the answer.
