@@ -31,6 +31,8 @@ and the whole analysis will be available from
 
 If you have a quantitative question which is connected to languages in general
 and not to one particular language, feel free to send it to me at
-yesbutisitlanguage@model-ling.eu – If I can find quantitative data to answer it,
-or to prove that we cannot answer it (maybe at all, maybe for now), I shall try
-to do that and post the answer.
+xxxxxxxxxxxxxxxxxxxxxxxx@model-ling.eu <!-- I'm still in draft mode, don't
+expect things to work yet! But I'm sure you can find some other way to contact
+me for pressing matters. --> – If I can find quantitative data to answer it, or
+to prove that we cannot answer it (maybe at all, maybe for now), I shall try to
+do that and post the answer.
